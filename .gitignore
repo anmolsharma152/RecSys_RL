@@ -8,3 +8,22 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Project-specific
+logs/
+checkpoints/
+*.pt
+*.pth
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+Conv about RecSys Proj with BigPickle.txt

@@ -1,7 +1,46 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "rl-project"
+name = "recsys-rl-ppo"
 version = "0.1.0"
-description = "Add your description here"
+description = "Reinforcement Learning for Recommender Systems using PPO/A2C"
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "torch>=2.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["env*", "agents*", "models*", "data*", "utils*"]
+namespaces = false
+
+[tool.setuptools]
+py-modules = ["config", "train", "evaluate", "main"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.1",
+    "matplotlib>=3.7",
+    "tensorboard>=2.13",
+]
+movielens = [
+    "pandas>=2.0",
+]
+
+[project.scripts]
+train = "train:main"
+evaluate = "evaluate:main"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
