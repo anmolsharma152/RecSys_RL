@@ -1,6 +1,4 @@
-def main():
-    print("Hello from rl-project!")
-
+from train import main as train_main
 
 if __name__ == "__main__":
-    main()
+    train_main()
