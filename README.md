@@ -2,6 +2,15 @@
 
 Reinforcement Learning for Recommender Systems — PPO & A2C from scratch.
 
+
+## Docs
+
+| Doc | Purpose |
+|-----|---------|
+| **[docs/STATUS.md](./docs/STATUS.md)** | Handoff status |
+| [docs/setup.md](./docs/setup.md) | Setup |
+| [AGENTS.md](./AGENTS.md) | Agent guidance |
+
 ```mermaid
 flowchart TB
     subgraph Environment["Recommendation Environment"]
